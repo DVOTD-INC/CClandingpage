@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="How attendees opt in to, use, and leave a Conference Companion text-message program.">
+<meta name="theme-color" content="#0a0a0a">
+<title>SMS Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+:root{--bg:#0a0a0a;--surface:#141414;--border:#2a2a2a;--text:#fff;--muted:#b0b0b0;--faint:#7a7a7a;--accent:#d90429;--accent-ink:#ff3b5c}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+header{border-bottom:1px solid var(--border)}
+header .wrap{display:flex;align-items:center;gap:18px;padding:18px 24px}
+header a.home{color:var(--text);text-decoration:none;font:600 12px Montserrat,Inter,sans-serif;letter-spacing:.26em;text-transform:uppercase}
+header a.home span{color:var(--faint);letter-spacing:.14em;margin-left:12px;text-transform:none;font-weight:500}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+main{padding:64px 0 90px}
+.eyebrow{font:600 11.5px Montserrat,Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 14px}
+h1{font-family:"Bebas Neue","Impact","Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(44px,7vw,78px);line-height:.96;margin:0 0 12px}
+.meta{color:var(--faint);font-size:14px;margin:0 0 40px}
+h2{font-family:"Bebas Neue","Impact",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:30px;line-height:1.05;margin:46px 0 12px;padding-top:26px;border-top:1px solid var(--border)}
+h3{font:600 15px Montserrat,Inter,sans-serif;margin:24px 0 8px}
+p,li{color:var(--muted)}
+p{margin:0 0 14px}
+ul{padding-left:22px;margin:0 0 14px}
+li{margin:0 0 8px}
+strong{color:var(--text);font-weight:600}
+a{color:var(--accent-ink)}
+.callout{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:18px 20px;margin:18px 0 22px;color:var(--text)}
+.callout p{color:var(--text);margin:0}
+.flow{display:grid;gap:12px;margin:18px 0 22px}
+.msg{background:#1c1c1c;border-radius:14px;border-bottom-left-radius:4px;padding:12px 16px;max-width:88%;color:#f2f2f2;font-size:15px;white-space:pre-line}
+.msg.me{background:var(--accent);color:#0a0a0a;justify-self:end;border-bottom-left-radius:14px;border-bottom-right-radius:4px}
+footer{border-top:1px solid var(--border);padding:30px 0 46px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;font-size:13px;color:var(--faint)}
+footer b{color:var(--text);font-weight:600;letter-spacing:.04em}
+footer nav{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px 22px}
+footer nav a{color:var(--faint);text-decoration:none}
+footer nav a:hover,footer nav a[aria-current]{color:var(--text)}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="home" href="./">DVOTD<span>The Conference Companion</span></a></div></header>
+<main><div class="wrap">
+<p class="eyebrow">DVOTD · The Conference Companion</p>
+<h1>SMS Program</h1>
+<p class="meta">DVOTD Inc. · Effective October 23, 2026</p>
+
+<p>The Conference Companion is the text-message service DVOTD Inc. runs for event hosts, under the host's brand. This page describes how attendees join, what they receive, and how they leave.</p>
+
+<h2>How attendees opt in</h2>
+<ul>
+<li><strong>Keyword.</strong> The attendee texts the event's keyword (for example, <strong>JOIN</strong>) to the program number shown on event materials.</li>
+<li><strong>QR code.</strong> The attendee scans the QR code displayed on event signage, slides, badges, or emails. It opens a pre-filled text message, or a short mobile form that asks for their mobile number and an unchecked box agreeing to receive messages.</li>
+<li><strong>Sign-up form.</strong> The attendee enters their number on the event's registration or sign-up form and ticks an unchecked consent box.</li>
+</ul>
+<p>Consent is never pre-selected and is not a condition of attending or buying anything. Every method shows the program name, the host, that message frequency varies, that message and data rates may apply, and how to reply STOP or HELP.</p>
+
+<h2>What the conversation looks like</h2>
+<div class="flow">
+<div class="msg me">JOIN</div>
+<div class="msg">Welcome to the [Event Name] Companion by [Host], powered by DVOTD. Reply YES to confirm your number. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to cancel, HELP for help.</div>
+<div class="msg me">YES</div>
+<div class="msg">You're in. One question before we start: what did you come to [Event Name] to achieve? A sentence is plenty.</div>
+<div class="msg me">I want to find a better system for following up with leads after the event.</div>
+<div class="msg">Got it. Two sessions tomorrow speak to that directly: "Follow-up That Sticks" at 10:15 in Hall B and the roundtable at 2:00. I'll remind you 20 minutes before each. Reply STOP anytime.</div>
+</div>
+
+<h2>What attendees receive</h2>
+<ul>
+<li>A one-time confirmation message to verify the number.</li>
+<li>Session recommendations matched to what they said they came for.</li>
+<li>Reminders and event updates from the host.</li>
+<li>Short check-ins during and after the event, and a follow-up that carries their plan forward.</li>
+</ul>
+<p><strong>Frequency:</strong> varies by event. Several messages per day during event days; occasional before and after.</p>
+
+<h2>Opting out and help</h2>
+<ul>
+<li>Reply <strong>STOP</strong> to cancel. One final confirmation is sent, then nothing further from that program.</li>
+<li>Reply <strong>HELP</strong> for help, or email <a href="mailto:jasmine@getdvotd.com">jasmine@getdvotd.com</a>.</li>
+<li><strong>Message and data rates may apply.</strong> Carriers are not liable for delayed or undelivered messages.</li>
+</ul>
+
+<h2>Privacy</h2>
+<p>We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes. Full details are in the <a href="privacy.html">Privacy Policy</a>. The program's terms are in the <a href="terms.html">Terms &amp; Conditions</a>.</p>
+
+</div></main>
+<footer><div class="wrap"><b>DVOTD</b><span>The Conference Companion</span><span>Questions: <a href="mailto:jasmine@getdvotd.com">jasmine@getdvotd.com</a></span><nav><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="sms.html" aria-current="page">SMS Program</a></nav></div></footer>
+</body>
+</html>

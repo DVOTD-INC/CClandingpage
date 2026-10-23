@@ -464,6 +464,9 @@ footer{border-top:1px solid var(--border-soft);padding:34px 0 48px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;font-size:13px;color:var(--faint)}
 footer b{color:var(--text);font-weight:600;letter-spacing:.04em}
 footer .sp{margin-left:auto}
+footer .legal{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:6px}
+footer .legal a{color:var(--faint);text-decoration:none}
+footer .legal a:hover{color:var(--text)}
 
 @media(max-width:960px){
   .j-grid{grid-template-columns:1fr;gap:0}
@@ -797,7 +800,7 @@ footer .sp{margin-left:auto}
             <textarea id="f-note" name="note" placeholder="Optional."></textarea>
           </div>
           <button class="btn btn-primary" type="submit" id="submitbtn">Book a 20-minute walkthrough</button>
-          <p class="formnote">We'll reply within one business day. Your details are never shared.</p>
+          <p class="formnote">We'll reply within one business day. Your details are never shared. <a href="privacy.html" style="color:inherit">Privacy Policy</a></p>
         </div>
         <div class="formmsg" id="formmsg" role="status" aria-live="polite"></div>
       </form>
@@ -810,6 +813,7 @@ footer .sp{margin-left:auto}
     <b>DVOTD</b>
     <span>The Conference Companion</span>
     <span class="sp">Private, branded, and white-labelled to your event.</span>
+    <nav class="legal" aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="sms.html">SMS Program</a></nav>
   </div>
 </footer>
 
