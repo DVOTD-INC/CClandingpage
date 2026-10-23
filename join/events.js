@@ -9,20 +9,19 @@
               QR screen), and paste the link it gives you here. It looks like
               https://dvotd-conference-app.web.app/join?c=XXXXXXXX
               Leave it "" and the page shows "opens soon" with no button.
-   accent   — the host's brand colour (hex). Leave "" for DVOTD red.
-   logo     — a logo image URL, or "". Shown above the event name.
+   accent   — an accent colour for the event (hex). Leave "" for DVOTD red.
+              The page carries DVOTD branding only: the carriers require the
+              registered business, DVOTD Inc., to be the one sender named.
    open     — false hides the join button and QR until you flip it to true.
    ============================================================ */
 window.EVENTS = {
 
   "demo": {
-    name: "The Summit",
-    host: "Your Organization",
+    name: "Spring Summit 2027",
     tagline: "Your companion for the two days ahead.",
     dates: "March 12–13, 2027",
     location: "Anaheim Convention Center",
     accent: "",
-    logo: "",
     joinUrl: "https://dvotd-conference-app.web.app/join?c=DEMO",
     open: true,
     whyLines: [
@@ -34,12 +33,10 @@ window.EVENTS = {
 
   "example": {
     name: "Event Name",
-    host: "Host Name",
-    tagline: "One line in the host's voice.",
+    tagline: "One line about the event.",
     dates: "Dates",
     location: "Venue, City",
     accent: "#1e5bff",
-    logo: "",
     joinUrl: "",
     open: false,
     whyLines: [

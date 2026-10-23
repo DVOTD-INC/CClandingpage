@@ -18,7 +18,6 @@ main{position:relative;z-index:1;flex:1}
 .wrap{max-width:560px;margin:0 auto;padding:0 22px}
 .top{padding:26px 0 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .host{font:600 11.5px Montserrat,Inter,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
-.host img{display:block;max-height:44px;max-width:180px;width:auto}
 .powered{font:500 10.5px Montserrat,Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
 .powered b{color:var(--text);font-weight:700}
 .hero{padding:54px 0 30px}
@@ -33,6 +32,7 @@ h1 em{font-style:normal;color:var(--accent);filter:brightness(1.25)}
 .btn:active{transform:scale(.99)}
 .btn svg{width:18px;height:18px;flex:none}
 .under{font-size:13px;color:var(--faint);text-align:center;margin:12px 0 0}
+.under.sender{color:var(--muted);margin-top:6px}
 .soon{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 20px;color:var(--muted);text-align:center}
 .soon b{color:var(--text);display:block;margin-bottom:4px}
 .steps{list-style:none;padding:0;margin:44px 0 0;display:grid;gap:12px;counter-reset:s}
@@ -72,13 +72,13 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
 <main>
   <div class="wrap">
     <div class="top">
-      <div class="host" id="host"></div>
-      <div class="powered">Messages from <b>DVOTD Inc.</b></div>
+      <div class="host">DVOTD · Conference Companion</div>
+      <div class="powered">Sent by <b>DVOTD Inc.</b></div>
     </div>
 
     <section id="page">
       <div class="hero">
-        <p class="eyebrow">DVOTD Conference Companion</p>
+        <p class="eyebrow">Your DVOTD Conference Companion for</p>
         <h1 id="title"></h1>
         <p class="tag" id="tagline"></p>
         <p class="when" id="when"></p>
@@ -87,7 +87,8 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
             <span>Join by text</span>
           </a>
-          <p class="under">Takes about a minute. A one-time code confirms your number.</p>
+          <p class="under">Takes about a minute. DVOTD Inc. texts you a one-time code to confirm your number.</p>
+          <p class="under sender">All messages are sent by DVOTD Inc. The event does not send texts.</p>
         </div>
         <div class="soon" id="soon" hidden><b>Opens on event day.</b>Check back when the doors open, or ask at registration.</div>
       </div>
@@ -142,7 +143,6 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
 
   if (ev.accent && /^#[0-9a-f]{6}$/i.test(ev.accent)) document.documentElement.style.setProperty("--accent", ev.accent);
   document.title = ev.name + " · Conference Companion";
-  if (ev.logo){ var im = new Image(); im.src = ev.logo; im.alt = ev.host; $("host").appendChild(im); } else { $("host").textContent = ev.host; }
   var words = ev.name.split(" "); var last = words.pop();
   $("title").innerHTML = (words.length ? words.join(" ") + " " : "") + "<em>" + last + "</em>";
   $("title").title = ev.name;
