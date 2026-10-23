@@ -37,7 +37,8 @@ h1 em{font-style:normal;color:var(--accent);filter:brightness(1.25)}
 .soon b{color:var(--text);display:block;margin-bottom:4px}
 .steps{list-style:none;padding:0;margin:44px 0 0;display:grid;gap:12px;counter-reset:s}
 .steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
-.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--raised);color:var(--text);font-family:"Bebas Neue","Impact",sans-serif;font-size:22px;border:1px solid var(--border)}
+.steps b,.steps span{grid-column:2}
+.steps li::before{grid-column:1;grid-row:1/3;content:counter(s);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--raised);color:var(--text);font-family:"Bebas Neue","Impact",sans-serif;font-size:22px;border:1px solid var(--border)}
 .steps b{display:block;color:var(--text);font-weight:600;margin-bottom:2px}
 .steps span{color:var(--muted);font-size:15px}
 .why{margin:40px 0 0}
@@ -140,7 +141,7 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
   if (!ev){ $("page").hidden = true; $("notfound").hidden = false; document.title = "Conference Companion"; return; }
 
   if (ev.accent && /^#[0-9a-f]{6}$/i.test(ev.accent)) document.documentElement.style.setProperty("--accent", ev.accent);
-  document.title = "Join the " + ev.name + " Companion";
+  document.title = ev.name + " · Conference Companion";
   if (ev.logo){ var im = new Image(); im.src = ev.logo; im.alt = ev.host; $("host").appendChild(im); } else { $("host").textContent = ev.host; }
   var words = ev.name.split(" "); var last = words.pop();
   $("title").innerHTML = (words.length ? words.join(" ") + " " : "") + "<em>" + last + "</em>";
