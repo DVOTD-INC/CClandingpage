@@ -25,7 +25,6 @@ window.EVENTS = {
     logo: "",
     joinUrl: "https://dvotd-conference-app.web.app/join?c=DEMO",
     open: true,
-    frequency: "Several messages a day during the event, occasional before and after.",
     whyLines: [
       "Tell it what you came for. It keeps that in front of you all event.",
       "Session picks matched to your goal, with a nudge before each one.",
@@ -43,7 +42,6 @@ window.EVENTS = {
     logo: "",
     joinUrl: "",
     open: false,
-    frequency: "Several messages a day during the event, occasional before and after.",
     whyLines: [
       "Tell it what you came for. It keeps that in front of you all event.",
       "Session picks matched to your goal, with a nudge before each one.",

@@ -73,12 +73,12 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
   <div class="wrap">
     <div class="top">
       <div class="host" id="host"></div>
-      <div class="powered">Powered by <b>DVOTD</b></div>
+      <div class="powered">Messages from <b>DVOTD Inc.</b></div>
     </div>
 
     <section id="page">
       <div class="hero">
-        <p class="eyebrow">Your Conference Companion</p>
+        <p class="eyebrow">DVOTD Conference Companion</p>
         <h1 id="title"></h1>
         <p class="tag" id="tagline"></p>
         <p class="when" id="when"></p>
@@ -93,9 +93,9 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
       </div>
 
       <ol class="steps">
-        <li><b>Tap join, enter your name and mobile number.</b><span>You'll get a one-time code by text to confirm it's you.</span></li>
+        <li><b>Tap join, enter your name and mobile number.</b><span>Tick the consent box, and DVOTD Inc. texts you a one-time code to confirm it's you.</span></li>
         <li><b>Tell it what you came here to achieve.</b><span>One sentence is plenty. That becomes the thread for the whole event.</span></li>
-        <li><b>Let it work for you.</b><span>Session picks, reminders and a place to drop notes, all by text. Nothing to install.</span></li>
+        <li><b>Let it work for you.</b><span>Session reminders, schedule updates and recommendations, all by text from DVOTD Inc. Nothing to install.</span></li>
       </ol>
 
       <div class="why">
@@ -113,12 +113,12 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
       </div>
 
       <div class="legal">
-        <b>About the messages.</b> By joining you agree to receive text messages about <span id="legalEvent"></span> from <span id="legalHost"></span>'s Conference Companion, operated by DVOTD Inc. Consent is not a condition of attending. <span id="legalFreq"></span> Message and data rates may apply. Reply <b>STOP</b> to cancel at any time, <b>HELP</b> for help. We do not sell or share your SMS opt-in data or personal information with third parties for marketing purposes. See the <a href="../privacy.html">Privacy Policy</a> and <a href="../terms.html">Terms &amp; Conditions</a>.
+        <b>About the messages.</b> By joining you agree to receive text messages from DVOTD Inc. (DVOTD Conference Companion) with session reminders, schedule updates, and personalized recommendations for the event you're attending. Message frequency varies, up to 8 msgs/day during the event. Msg &amp; data rates may apply. Reply <b>STOP</b> to cancel at any time, <b>HELP</b> for help. Consent is not a condition of attendance. We do not sell or share your information with third parties. See the <a href="../privacy.html">Privacy Policy</a> and <a href="../terms.html">Terms &amp; Conditions</a>.
       </div>
     </section>
 
     <section id="notfound" class="notfound" hidden>
-      <p class="eyebrow">Conference Companion</p>
+      <p class="eyebrow">DVOTD Conference Companion</p>
       <h1>This event's Companion isn't open yet.</h1>
       <p>If you were given this link at an event, ask at registration for the right one. Otherwise, see <a href="../" style="color:var(--text)">what the Conference Companion is</a>.</p>
     </section>
@@ -148,7 +148,6 @@ footer .brand{color:var(--text);font-weight:600;letter-spacing:.04em}
   $("title").title = ev.name;
   $("tagline").textContent = ev.tagline || "";
   $("when").textContent = [ev.dates, ev.location].filter(Boolean).join(" · ");
-  $("legalEvent").textContent = ev.name; $("legalHost").textContent = ev.host; $("legalFreq").textContent = ev.frequency || "Message frequency varies.";
   (ev.whyLines || []).forEach(function(t){ var li = document.createElement("li"); li.textContent = t; $("why").appendChild(li); });
 
   var ready = ev.open !== false && ev.joinUrl;
